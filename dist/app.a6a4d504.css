@@ -52,3 +52,24 @@
 .my-button > .loading {
   animation: spin 2s infinite linear;
 }
+.boutton-group {
+  display: inline-flex;
+  vertical-align: middle;
+}
+.boutton-group :not(:first-child) {
+  margin-left: -1px;
+}
+.boutton-group > .my-button {
+  border-radius: 0;
+}
+.boutton-group > .my-button:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+.boutton-group > .my-button:last-child {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.boutton-group :hover {
+  z-index: 2;
+}

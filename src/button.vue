@@ -21,15 +21,10 @@ export default {
       type: String,
       default: "left",
       validator(value) {
-        console.log(value);
         return value === "right" || value === "left";
       },
     },
-  },
-  created() {
-    console.log("button");
-    console.log(this);
-  },
+  }
 };
 </script>
 <style lang="scss">
