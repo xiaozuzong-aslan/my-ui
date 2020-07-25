@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-ui</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+            --button-height: 34px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+        }
+
+        body {
+            font-size: var(--font-size);
+        }
+
+        #app {
+            margin: 20px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <my-button icon-name="setting" icon-positon="right" :loading="loadding1">按钮</my-button>
+        <my-button icon-name="setting" :loading="loadding2" @click="loadding2 =! loadding2">按钮</my-button>
+        <my-button icon-name="setting">按钮
+        </my-button>
+    </div>
+    <script src="./src/app.js"></script>
+    <script src="//at.alicdn.com/t/font_1963707_tepwu3612br.js"></script>
+
+</body>
+
+</html>
