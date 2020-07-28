@@ -1,5 +1,5 @@
 <template>
-  <button class="my-button" :class="{[`icon-${iconPositon}`]:true}" @click="$emit('click')">
+  <button class="my-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
     <my-icon v-if="iconName && !loading" class="icon" :icon="iconName"></my-icon>
     <my-icon v-if="loading" class="loading icon" icon="loading"></my-icon>
     <div class="content">
@@ -8,7 +8,11 @@
   </button>
 </template>
 <script>
+import Icon from "./icon.vue";
 export default {
+  components: {
+    "my-icon": Icon,
+  },
   props: {
     iconName: {
       type: String,
@@ -17,14 +21,14 @@ export default {
       type: Boolean,
       default: false,
     },
-    iconPositon: {
+    iconPosition: {
       type: String,
       default: "left",
       validator(value) {
         return value === "right" || value === "left";
       },
     },
-  }
+  },
 };
 </script>
 <style lang="scss">
