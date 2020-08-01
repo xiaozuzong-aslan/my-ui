@@ -4,12 +4,13 @@
   </svg>
 </template>
 <script>
+import "./svg";
 export default {
   props: {
     icon: {
       type: String,
     },
-  }
+  },
 };
 </script>
 <style lang="scss">

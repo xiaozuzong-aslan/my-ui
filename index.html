@@ -31,27 +31,23 @@
 
         #app {
             margin: 20px;
-            border: 1px solid red;
+        }
+
+        .box {
+            margin: 20px;
         }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <my-button icon-name="setting" icon-position="right" :loading="loadding1">按钮</my-button>
-        <my-button icon-name="setting" :loading="loadding2" @click="loadding2 =! loadding2">按钮</my-button>
-        <my-button icon-name="setting">按钮
-        </my-button>
-        <my-button-group>
-            <my-button icon-name="left" icon-position="left" :loading="loadding1">上一页</my-button>
-            <my-button>更多</my-button>
-            <my-button icon-name="right" icon-position="right" :loading="loadding1">下一页</my-button>
-
-        </my-button-group>
-        <div id="test"></div>
+        <my-row>
+            <my-col span="12">1</my-col>
+            <my-col span="12">2</my-col>
+        </my-row>
     </div>
     <script src="./src/app.js"></script>
-    <script src="//at.alicdn.com/t/font_1963707_tepwu3612br.js"></script>
+
 
 </body>
 

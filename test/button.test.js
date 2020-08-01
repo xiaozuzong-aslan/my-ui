@@ -58,7 +58,6 @@ describe('Button', () => {
         vm.$el.remove()
     })
     it('触发click', () => {
-
         vm = new Constructor({
             propsData: {
                 iconName: 'setting',
